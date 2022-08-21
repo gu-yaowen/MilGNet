@@ -1,0 +1,599 @@
+ID,Name,Disease
+0,anxiety disorders,D001008
+1,ataxia,D001259
+2,"constriction, pathologic",D003251
+3,"epilepsy, tonic-clonic",D004830
+4,glycosuria,D006029
+5,disorders of excessive somnolence,D006970
+6,hypothyroidism,D007037
+7,myoclonus,D009207
+8,paresis,D010291
+9,proteinuria,D011507
+10,seizures,D012640
+11,stevens-johnson syndrome,D013262
+12,substance withdrawal syndrome,D013375
+13,hypophosphatemia,D017674
+14,neurobehavioral manifestations,D019954
+15,"vasospasm, intracranial",D020301
+16,adenocarcinoma of lung,C538231
+17,adenocarcinoma,D000230
+18,agranulocytosis,D000380
+19,alopecia,D000505
+20,anemia,D000740
+21,angina pectoris,D000787
+22,anorexia,D000855
+23,asthenia,D001247
+24,atrial fibrillation,D001281
+25,atrial flutter,D001282
+26,autonomic nervous system diseases,D001342
+27,breast neoplasms,D001943
+28,carcinoma,D002277
+29,"carcinoma, non-small-cell lung",D002289
+30,"carcinoma, squamous cell",D002294
+31,cardiovascular diseases,D002318
+32,central nervous system diseases,D002493
+33,constipation,D003248
+34,dermatitis,D003872
+35,diarrhea,D003967
+36,edema,D004487
+37,erythema,D004890
+38,fatigue,D005221
+39,fever,D005334
+40,gastrointestinal diseases,D005767
+41,head and neck neoplasms,D006258
+42,"hearing loss, bilateral",D006312
+43,"hearing loss, sensorineural",D006319
+44,heart diseases,D006331
+45,heart failure,D006333
+46,hematologic diseases,D006402
+47,hypertension,D006973
+48,hyponatremia,D007010
+49,inappropriate adh syndrome,D007177
+50,kidney diseases,D007674
+51,leukopenia,D007970
+52,liver neoplasms,D008113
+53,lung diseases,D008171
+54,lung neoplasms,D008175
+55,melanoma,D008545
+56,mesothelioma,D008654
+57,muscular diseases,D009135
+58,myocardial infarction,D009203
+59,nausea,D009325
+60,neoplasm metastasis,D009362
+61,neoplasms,D009369
+62,nervous system diseases,D009422
+63,neuralgia,D009437
+64,neutropenia,D009503
+65,ovarian neoplasms,D010051
+66,pain,D010146
+67,pancreatic neoplasms,D010190
+68,pancytopenia,D010198
+69,paresthesia,D010292
+70,peripheral nervous system diseases,D010523
+71,phlebitis,D010689
+72,polyneuropathies,D011115
+73,prostatic neoplasms,D011471
+74,pulmonary embolism,D011655
+75,spinal cord diseases,D013118
+76,stomatitis,D013280
+77,thrombocytopenia,D013921
+78,thromboembolism,D013923
+79,tinnitus,D014012
+80,vascular diseases,D014652
+81,vomiting,D014839
+82,"glomerulonephritis, membranous",D015433
+83,liver failure,D017093
+84,myocardial ischemia,D017202
+85,sepsis,D018805
+86,venous thrombosis,D020246
+87,neurotoxicity syndromes,D020258
+88,mucositis,D052016
+89,drug-related side effects and adverse reactions,D064420
+90,albuminuria,D000419
+91,"arrhythmias, cardiac",D001145
+92,bradycardia,D001919
+93,"cardiomyopathy, dilated",D002311
+94,"cardiomyopathy, hypertrophic",D002312
+95,cognition disorders,D003072
+96,dementia,D003704
+97,drug eruptions,D003875
+98,diabetic angiopathies,D003925
+99,"disease models, animal",D004195
+100,dizziness,D004244
+101,endomyocardial fibrosis,D004719
+102,glioma,D005910
+103,headache,D006261
+104,heart arrest,D006323
+105,"heart defects, congenital",D006330
+106,cardiomegaly,D006332
+107,hyperemia,D006940
+108,"hypertension, portal",D006975
+109,"hypertension, pulmonary",D006976
+110,"hypertension, renal",D006977
+111,hypotension,D007022
+112,"hypotension, orthostatic",D007024
+113,inflammation,D007249
+114,insulin resistance,D007333
+115,"kidney failure, chronic",D007676
+116,memory disorders,D008569
+117,movement disorders,D009069
+118,cardiomyopathies,D009202
+119,myocarditis,D009205
+120,necrosis,D009336
+121,postoperative complications,D011183
+122,pruritus,D011537
+123,quadriplegia,D011782
+124,rhabdomyolysis,D012206
+125,sleep wake disorders,D012893
+126,tachycardia,D013610
+127,ventricular fibrillation,D014693
+128,reperfusion injury,D015427
+129,myocardial reperfusion injury,D015428
+130,weight loss,D015431
+131,panic disorder,D016584
+132,"death, sudden, cardiac",D016757
+133,"tachycardia, ventricular",D017180
+134,"hypertrophy, left ventricular",D017379
+135,"vasculitis, leukocytoclastic, cutaneous",D018366
+136,"ventricular dysfunction, left",D018487
+137,ventricular dysfunction,D018754
+138,cocaine-related disorders,D019970
+139,"infarction, middle cerebral artery",D020244
+140,ventricular remodeling,D020257
+141,stroke,D020521
+142,coronary stenosis,D023921
+143,renal insufficiency,D051437
+144,acute coronary syndrome,D054058
+145,atrioventricular block,D054537
+146,chemical and drug induced liver injury,D056486
+147,acute kidney injury,D058186
+148,drug overdose,D062787
+149,cardiotoxicity,D066126
+150,angioedema,D000799
+151,cough,D003371
+152,diabetic nephropathies,D003928
+153,fibrosis,D005355
+154,glomerulonephritis,D005921
+155,"glomerulosclerosis, focal segmental",D005923
+156,hepatitis,D006505
+157,hyperglycemia,D006943
+158,hyperinsulinism,D006946
+159,hypertrophy,D006984
+160,intestinal diseases,D007410
+161,"neoplasms, experimental",D009374
+162,"neovascularization, pathologic",D009389
+163,nephrosclerosis,D009400
+164,nephrotic syndrome,D009404
+165,uremia,D014511
+166,glucose intolerance,D018149
+167,metabolic syndrome x,D024821
+168,atherosclerosis,D050197
+169,"abnormalities, multiple",D000015
+170,arthritis,D001168
+171,"arthritis, experimental",D001169
+172,"arthritis, rheumatoid",D001172
+173,cleft palate,D002972
+174,erythema multiforme,D004892
+175,fatty liver,D005234
+176,"heart septal defects, ventricular",D006345
+177,hematuria,D006417
+178,liver cirrhosis,D008103
+179,"nephritis, interstitial",D009395
+180,neural tube defects,D009436
+181,vasculitis,D014657
+182,"limb deformities, congenital",D017880
+183,craniofacial abnormalities,D019465
+184,back pain,D001416
+185,basal ganglia diseases,D001480
+186,bipolar disorder,D001714
+187,blood coagulation disorders,D001778
+188,child behavior disorders,D002653
+189,chorea,D002819
+190,delirium,D003693
+191,depressive disorder,D003866
+192,diplopia,D004172
+193,disseminated intravascular coagulation,D004211
+194,drug hypersensitivity,D004342
+195,dystonia,D004421
+196,eosinophilia,D004802
+197,epilepsy,D004827
+198,"epilepsy, generalized",D004829
+199,"epilepsies, myoclonic",D004831
+200,"epilepsy, absence",D004832
+201,exanthema,D005076
+202,hallucinations,D006212
+203,hepatomegaly,D006529
+204,hyperalgesia,D006930
+205,hyperkinesis,D006948
+206,erectile dysfunction,D007172
+207,sleep initiation and maintenance disorders,D007319
+208,jaundice,D007565
+209,learning disorders,D007859
+210,lymphatic diseases,D008206
+211,"meningitis, aseptic",D008582
+212,multiple organ failure,D009102
+213,nerve degeneration,D009410
+214,"parkinson disease, secondary",D010302
+215,pneumonia,D011014
+216,"psychoses, substance-induced",D011605
+217,schizophrenia,D012559
+218,status epilepticus,D013226
+219,tremor,D014202
+220,"liver failure, acute",D017114
+221,mood disorders,D019964
+222,coma,D003128
+223,confusion,D003221
+224,"depressive disorder, major",D003865
+225,hepatic encephalopathy,D006501
+226,liver diseases,D008107
+227,muscle rigidity,D009127
+228,myositis,D009220
+229,"sexual dysfunction, physiological",D012735
+230,vision disorders,D014786
+231,"akathisia, drug-induced",D017109
+232,serotonin syndrome,D020230
+233,coronary vasospasm,D003329
+234,vertigo,D014717
+235,neurodegenerative diseases,D019636
+236,"anemia, aplastic",D000741
+237,arterial occlusive diseases,D001157
+238,cerebral hemorrhage,D002543
+239,brain ischemia,D002545
+240,"ischemic attack, transient",D002546
+241,cholestasis,D002779
+242,coronary artery disease,D003324
+243,coronary disease,D003327
+244,coronary thrombosis,D003328
+245,dyspnea,D004417
+246,hemolytic-uremic syndrome,D006463
+247,hemorrhage,D006470
+248,hypesthesia,D006987
+249,intraoperative complications,D007431
+250,subarachnoid hemorrhage,D013345
+251,syncope,D013575
+252,thrombosis,D013927
+253,urticaria,D014581
+254,intracranial hemorrhages,D020300
+255,anaphylaxis,D000707
+256,"anemia, hemolytic",D000743
+257,hypoxia,D000860
+258,aphasia,D001037
+259,urinary bladder neoplasms,D001749
+260,blindness,D001766
+261,bone marrow diseases,D001855
+262,bundle-branch block,D002037
+263,"carcinoma, renal cell",D002292
+264,"carcinoma, transitional cell",D002295
+265,uterine cervical neoplasms,D002583
+266,chest pain,D002637
+267,deglutition disorders,D003680
+268,hemolysis,D006461
+269,"carcinoma, hepatocellular",D006528
+270,hodgkin disease,D006689
+271,hyperbilirubinemia,D006932
+272,hyperkalemia,D006947
+273,ischemia,D007511
+274,"lymphoma, non-hodgkin",D008228
+275,multiple myeloma,D009101
+276,pericardial effusion,D010490
+277,pulmonary edema,D011654
+278,"respiratory distress syndrome, adult",D012128
+279,"shock, cardiogenic",D012770
+280,"tachycardia, supraventricular",D013617
+281,colorectal neoplasms,D015179
+282,abdominal pain,D015746
+283,"lymphoma, large b-cell, diffuse",D016403
+284,lethargy,D053609
+285,leukoencephalopathies,D056784
+286,acidosis,D000138
+287,"cholestasis, intrahepatic",D002780
+288,colitis,D003092
+289,colonic neoplasms,D003110
+290,diabetes mellitus,D003920
+291,"diabetes mellitus, experimental",D003921
+292,"diabetes mellitus, type 2",D003924
+293,hyperlipidemias,D006949
+294,hyperplasia,D006965
+295,"liver neoplasms, experimental",D008114
+296,"mammary neoplasms, experimental",D008325
+297,neoplasm invasiveness,D009361
+298,precancerous conditions,D011230
+299,psoriasis,D011565
+300,pulmonary fibrosis,D011658
+301,skin neoplasms,D012878
+302,stomach neoplasms,D013274
+303,thyroid neoplasms,D013964
+304,hypertriglyceridemia,D015228
+305,weight gain,D015430
+306,"leukemia, myeloid, acute",D015470
+307,massive hepatic necrosis,D047508
+308,precursor cell lymphoblastic leukemia-lymphoma,D054198
+309,autistic disorder,D001321
+310,mental disorders,D001523
+311,brain injuries,D001930
+312,cystic fibrosis,D003550
+313,"liver cirrhosis, experimental",D008106
+314,obesity,D009765
+315,parkinson disease,D010300
+316,dyslipidemias,D050171
+317,asthma,D001249
+318,endometriosis,D004715
+319,leukocytosis,D007964
+320,migraine disorders,D008881
+321,pancreatitis,D010195
+322,pharyngitis,D010612
+323,sinusitis,D012852
+324,churg-strauss syndrome,D015267
+325,"pulmonary disease, chronic obstructive",D029424
+326,"abnormalities, drug-induced",D000014
+327,"anemia, hemolytic, autoimmune",D000744
+328,arteriosclerosis,D001161
+329,autoimmune diseases,D001327
+330,fetal diseases,D005315
+331,gastrointestinal hemorrhage,D006471
+332,"lupus erythematosus, systemic",D008180
+333,lymphoma,D008223
+334,myasthenia gravis,D009157
+335,myelodysplastic syndromes,D009190
+336,nephritis,D009393
+337,prenatal exposure delayed effects,D011297
+338,"red-cell aplasia, pure",D012010
+339,"signs and symptoms, digestive",D012817
+340,"lymphoma, b-cell",D016393
+341,polymyositis,D017285
+342,arthralgia,D018771
+343,muscle weakness,D018908
+344,bacterial infections,D001424
+345,"cell transformation, neoplastic",D002471
+346,dermatomyositis,D003882
+347,diabetic neuropathies,D003929
+348,dyspepsia,D004415
+349,hypercholesterolemia,D006937
+350,osteoarthritis,D010003
+351,"pain, postoperative",D010149
+352,"reflex, abnormal",D012021
+353,sialorrhea,D012798
+354,stomach ulcer,D013276
+355,premature birth,D047928
+356,brain diseases,D001927
+357,cerebellar ataxia,D002524
+358,cerebral infarction,D002544
+359,conjunctivitis,D003231
+360,consciousness disorders,D003244
+361,esophageal neoplasms,D004938
+362,flushing,D005483
+363,hypocalcemia,D006996
+364,infection,D007239
+365,pleural effusion,D010996
+366,sarcoma,D012509
+367,skin diseases,D012871
+368,speech disorders,D013064
+369,thrombophlebitis,D013924
+370,uterine neoplasms,D014594
+371,gait ataxia,D020234
+372,venous thromboembolism,D054556
+373,"affective disorders, psychotic",D000341
+374,amnesia,D000647
+375,feeding and eating disorders,D001068
+376,athetosis,D001264
+377,blepharoptosis,D001763
+378,catalepsy,D002375
+379,catatonia,D002389
+380,cerebrovascular disorders,D002561
+381,developmental disabilities,D002658
+382,"dyskinesia, drug-induced",D004409
+383,tourette syndrome,D005879
+384,heart block,D006327
+385,hyperprolactinemia,D006966
+386,hypothermia,D007035
+387,"infant, newborn, diseases",D007232
+388,long qt syndrome,D008133
+389,muscle hypertonia,D009122
+390,myoglobinuria,D009212
+391,neuroleptic malignant syndrome,D009459
+392,neurologic manifestations,D009461
+393,obsessive-compulsive disorder,D009771
+394,paranoid disorders,D010259
+395,polyuria,D011141
+396,priapism,D011317
+397,pseudotumor cerebri,D011559
+398,psychomotor agitation,D011595
+399,psychotic disorders,D011618
+400,respiratory insufficiency,D012131
+401,restless legs syndrome,D012148
+402,"schizophrenia, paranoid",D012563
+403,somnambulism,D013009
+404,"stress disorders, post-traumatic",D013313
+405,stuttering,D013342
+406,torticollis,D014103
+407,urinary incontinence,D014549
+408,urination disorders,D014555
+409,xerostomia,D014987
+410,urinary retention,D016055
+411,hypokinesia,D018476
+412,stereotypic movement disorder,D019956
+413,substance-related disorders,D019966
+414,amphetamine-related disorders,D019969
+415,"sexual dysfunctions, psychological",D020018
+416,parkinsonian disorders,D020734
+417,dystonic disorders,D020821
+418,dysphonia,D055154
+419,fetal growth retardation,D005317
+420,hypokalemia,D007008
+421,"obstetric labor, premature",D007752
+422,oral ulcer,D019226
+423,poisoning,D011041
+424,anuria,D001002
+425,alzheimer disease,D000544
+426,brain edema,D001929
+427,granuloma,D006099
+428,spinal cord injuries,D013119
+429,ventricular premature complexes,D018879
+430,mitochondrial diseases,D028361
+431,lung injury,D055370
+432,non-alcoholic fatty liver disease,D065626
+433,hypersensitivity,D006967
+434,torsades de pointes,D016171
+435,nervous system malformations,D009421
+436,purpura,D011693
+437,stomach diseases,D013272
+438,intracranial hypertension,D019586
+439,acne vulgaris,D000152
+440,glioblastoma,D005909
+441,kidney neoplasms,D007680
+442,"lung diseases, interstitial",D017563
+443,leukemia,D007938
+444,"leukemia, myelogenous, chronic, bcr-abl positive",D015464
+445,endometrial neoplasms,D016889
+446,posterior leukoencephalopathy syndrome,D054038
+447,atrophy,D001284
+448,bone diseases,D001847
+449,cholelithiasis,D002769
+450,gout,D006073
+451,"nystagmus, pathologic",D009759
+452,peptic ulcer,D010437
+453,respiration disorders,D012120
+454,postoperative nausea and vomiting,D020250
+455,"hypertension, malignant",D006974
+456,muscle cramp,D009120
+457,brain infarction,D020520
+458,cholangitis,D002761
+459,cystitis,D003556
+460,dysarthria,D004401
+461,photosensitivity disorders,D010787
+462,testicular diseases,D013733
+463,demyelinating diseases,D003711
+464,"disruptive, impulse control, and conduct disorders",D007174
+465,shock,D012769
+466,conduct disorder,D019955
+467,dyskinesias,D020820
+468,musculoskeletal diseases,D009140
+469,respiratory tract infections,D012141
+470,attention deficit disorder with hyperactivity,D001289
+471,cataplexy,D002385
+472,galactorrhea,D005687
+473,hyperhidrosis,D006945
+474,"tachycardia, sinus",D013616
+475,hot flashes,D019584
+476,"acidosis, lactic",D000140
+477,bile duct diseases,D001649
+478,cataract,D002386
+479,"death, sudden",D003645
+480,fetal death,D005313
+481,gastritis,D005756
+482,hypoglycemia,D007003
+483,"infertility, female",D007247
+484,kidney papillary necrosis,D007681
+485,"kidney tubular necrosis, acute",D007683
+486,methemoglobinemia,D008708
+487,oliguria,D009846
+488,pregnancy complications,D011248
+489,"purpura, schoenlein-henoch",D011695
+490,hyperammonemia,D022124
+491,azotemia,D053099
+492,apnea,D001049
+493,"infant, premature, diseases",D007235
+494,ocular hypertension,D009798
+495,papilledema,D010211
+496,paralysis,D010243
+497,taste disorders,D013651
+498,spasm,D013035
+499,bronchial spasm,D001986
+500,extravasation of diagnostic and therapeutic materials,D005119
+501,"sinus arrest, cardiac",D054138
+502,"leukemia, lymphoid",D007945
+503,multiple sclerosis,D009103
+504,personality disorders,D010554
+505,psychomotor disorders,D011596
+506,peripheral vascular diseases,D016491
+507,growth disorders,D006130
+508,"diabetes insipidus, nephrogenic",D018500
+509,olfaction disorders,D000857
+510,ascites,D001201
+511,cerebellar diseases,D002526
+512,color vision defects,D003117
+513,eye diseases,D005128
+514,hypercalcemia,D006934
+515,hyperthyroidism,D006980
+516,lipidoses,D008064
+517,muscular atrophy,D009133
+518,neuromuscular diseases,D009468
+519,ophthalmoplegia,D009886
+520,optic atrophy,D009896
+521,optic nerve diseases,D009901
+522,sick sinus syndrome,D012804
+523,sinoatrial block,D012848
+524,splenomegaly,D013163
+525,"gait disorders, neurologic",D020233
+526,photophobia,D020795
+527,"jaundice, obstructive",D041781
+528,enuresis,D004775
+529,hearing disorders,D006311
+530,ocular motility disorders,D015835
+531,miosis,D015877
+532,hearing loss,D034381
+533,prenatal injuries,D049188
+534,stupor,D053608
+535,"encephalomyelitis, autoimmune, experimental",D004681
+536,heroin dependence,D006556
+537,pericarditis,D010493
+538,adenoma,D000236
+539,"brain diseases, metabolic",D001928
+540,brain neoplasms,D001932
+541,deafness,D003638
+542,gastroenteritis,D005759
+543,muscle hypotonia,D009123
+544,staphylococcal infections,D013203
+545,testicular neoplasms,D013736
+546,ulcer,D014456
+547,hiccup,D006606
+548,paraplegia,D010264
+549,low back pain,D017116
+550,"liver cirrhosis, biliary",D008105
+551,"leukemia, lymphocytic, chronic, b-cell",D015451
+552,gynecomastia,D006177
+553,hydronephrosis,D006869
+554,meningitis,D008581
+555,pituitary neoplasms,D010911
+556,raynaud disease,D011928
+557,opioid-related disorders,D009293
+558,neonatal abstinence syndrome,D009357
+559,peritonitis,D010538
+560,embryo loss,D020964
+561,osteoporosis,D010024
+562,polyarteritis nodosa,D010488
+563,"tachycardia, paroxysmal",D013614
+564,tic disorders,D013981
+565,"mammary neoplasms, animal",D015674
+566,motor skills disorders,D019957
+567,chills,D023341
+568,"dermatitis, exfoliative",D003873
+569,muscle spasticity,D009128
+570,retinal diseases,D012164
+571,unconsciousness,D014474
+572,porphyria cutanea tarda,D017119
+573,hyperhomocysteinemia,D020138
+574,osteomyelitis,D010019
+575,urinary bladder diseases,D001745
+576,pyelonephritis,D011704
+577,"micronuclei, chromosome-defective",D048629
+578,"anemia, megaloblastic",D000749
+579,keratitis,D007634
+580,"lupus erythematosus, cutaneous",D008178
+581,malaria,D008288
+582,erythema nodosum,D004893
+583,oligospermia,D009845
+584,"shock, septic",D012772
+585,hepatic veno-occlusive disease,D006504
+586,pheochromocytoma,D010673
+587,reflex sympathetic dystrophy,D012019
+588,nocturnal enuresis,D053206
+589,sensation disorders,D012678
+590,mononeuropathies,D020422
+591,burkitt lymphoma,D002051
+592,recurrence,D012008
+593,rhabdomyosarcoma,D012208
+594,"leukemia, promyelocytic, acute",D015473
+595,precursor t-cell lymphoblastic leukemia-lymphoma,D054218
+596,dissociative disorders,D004213
+597,"cardiac output, low",D002303
