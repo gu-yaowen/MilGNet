@@ -2,7 +2,7 @@
 Codes for "MilGNet: A Multi-instance Learning-based Heterogeneous Graph Network for Drug repositioning"
 
 # Reference
-If you make advantage of the CurrMG training strategy proposed in our paper, please cite the following in your manuscript:
+If you make advantage of the MilGNet model or its modules proposed in our paper, please cite the following in your manuscript:
 TBD
 
 # Overview
