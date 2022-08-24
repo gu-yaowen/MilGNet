@@ -17,8 +17,6 @@ parser.add_argument('-pr', '--print_every', default=10, type=int,
                     help='The number of epochs to print a training record')
 parser.add_argument('-fo', '--nfold', default=10, type=int,
                     help='The number of k in k-fold cross validation')
-parser.add_argument('-ns', '--neg_sampling', default='1,2', type=str,
-                    help='The ratio of negative sampling to be used.(Default: 1 pos : 2 neg)')
 parser.add_argument('-ep', '--epoch', default=500, type=int,
                     help='The number of epochs for model training')
 parser.add_argument('-bs', '--batch_size', default=128, type=int,
@@ -29,7 +27,7 @@ parser.add_argument('-wd', '--weight_decay', default=0.0, type=float,
                     help='weight decay to be used')
 parser.add_argument('-ck', '--check_metric', default='loss', type=str,
                     choices=['loss', 'auc', 'aupr'],
-                    help='weight decay to be used')
+                    help='The metric used in checkpoint loading')
 # Model Argument
 parser.add_argument('-k', '--k', default=20, type=int,
                     help='The number of topk similarities to be binarized')
@@ -46,10 +44,6 @@ parser.add_argument('-dp', '--dropout', default=0., type=float,
                     help='The rate of dropout layer')
 parser.add_argument('-bn', '--batch_norm', action='store_true',
                     help='The rate of dropout layer')
-parser.add_argument('-sk', '--skip', default=False, type=bool,
-                    help='')
-parser.add_argument('-mil', '--mil', default=False, type=bool,
-                    help='')
 
 args = parser.parse_args()
 args.saved_path = 'result/' + args.dataset + '/' + args.saved_path + '_' + str(args.seed)
