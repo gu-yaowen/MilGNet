@@ -24,7 +24,6 @@ def load_data(args):
              [0, 2, 1, 1],
              [0, 891, 32, 1]
              ...]
-            In the above data, the 99999 is used as a placeholder for maintaining the dimensions.
             The 0-1 columns are the drug node ids, while the 2-3 are the disease node ids.
 
         label : np.array
