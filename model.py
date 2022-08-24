@@ -184,8 +184,7 @@ class MLP(nn.Module):
 
 class Model(nn.Module):
     def __init__(self, etypes, in_feats, hidden_feats,
-                 num_emb_layers, agg_type='sum', k=0, dropout=0., bn=False,
-                 skip=True, mil=True):
+                 num_emb_layers, agg_type='sum', k=0, dropout=0., bn=False):
         """
         Parameters
         ----------
@@ -198,8 +197,10 @@ class Model(nn.Module):
         num_emb_layers : int
             Number of embedding layers to be used.
         agg_type : string
-            Type of meta-path aggregator to be used, including "sum", "average", "linear", and "RotatE".
-        dropouot : float
+            Type of meta-path aggregator to be used, including "sum", "average", "linear", and "BiTrans".
+        k : int
+            The topk instance predictions to be chosen.
+        dropout : float
             The dropout rate to be used.
         bn : bool
             Whether to use batch normalization layer.
