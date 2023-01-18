@@ -11,11 +11,11 @@ TBD
 * torch==1.8.0
 * dgl==0.5.2
 
-## Easy Usage
+## k-fold Cross Validation
     python main.py -da {DATASET} -sp {SAVED PATH}
     Main arguments:
-        -da: B-dataset C-dataset F-dataset
-        -ag: Aggregation method for bag embedding
+        -da: B-dataset C-dataset F-dataset R-dataset
+        -ag: Aggregation method for bag embedding [sum, mean, Linear, BiTrans]
         -nl: The number of HeteroGCN layer
         -tk: The topk similarities in heterogeneous network construction
         -k : The topk filtering in instance predictor
@@ -26,5 +26,8 @@ TBD
         -dp: Dropout rate
     For more arguments, please see args.py
     
+## Model Intepretebility
+Use the ''model_intepret.ipynb'' to easily generate topk most important **meta-path instances** for given drug-disease pair (require **pre-trained model** first).
+
 # Contact
 We welcome you to contact us (email: gu.yaowen@imicams.ac.cn) for any questions and cooperations.

@@ -1,4 +1,3 @@
-import os
 import argparse
 
 parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
@@ -6,7 +5,7 @@ parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFo
 parser.add_argument('-id', '--device_id', default='0', type=str,
                     help='Set the device (GPU ids)')
 parser.add_argument('-da', '--dataset', default='B-dataset', type=str,
-                    choices=['B-dataset', 'C-dataset', 'F-dataset'],
+                    # choices=['B-dataset', 'C-dataset', 'F-dataset', 'REDDA'],
                     help='Set the data set for training')
 parser.add_argument('-sp', '--saved_path', default='saved', type=str,
                     help='Path to save training results')
@@ -27,7 +26,7 @@ parser.add_argument('-wd', '--weight_decay', default=0.0, type=float,
                     help='weight decay to be used')
 parser.add_argument('-ck', '--check_metric', default='loss', type=str,
                     choices=['loss', 'auc', 'aupr'],
-                    help='The metric used in checkpoint loading')
+                    help='weight decay to be used')
 # Model Argument
 parser.add_argument('-k', '--k', default=20, type=int,
                     help='The number of topk similarities to be binarized')
@@ -44,6 +43,12 @@ parser.add_argument('-dp', '--dropout', default=0., type=float,
                     help='The rate of dropout layer')
 parser.add_argument('-bn', '--batch_norm', action='store_true',
                     help='The rate of dropout layer')
+parser.add_argument('-sk', '--skip', default=False, type=bool,
+                    help='')
+parser.add_argument('-mil', '--mil', default=False, type=bool,
+                    help='')
+parser.add_argument('-ip', '--ins_predict', default=False, type=bool,
+                    help='')
 
 args = parser.parse_args()
 args.saved_path = 'result/' + args.dataset + '/' + args.saved_path + '_' + str(args.seed)

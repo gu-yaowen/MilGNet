@@ -18,13 +18,13 @@ def load_data(args):
         feature : dict[node_types, feature_tensors]
             Initialized node features of g.
         data : np.array
-            Bags of meta-path instances.
-            Given a drug d_a(id:0) and a disease d_b(id:1). The meta-path instance can be:
+            Bags of meta-path instances with a form of [drug_A, drug_B, disease_A, disease_B].
+            Given a drug d_a(id:0) and a disease d_b(id:1). Its meta-path instances can be:
             [[0, 0, 1, 1],
-             [0, 2, 1, 1],
-             [0, 891, 32, 1]
+             [0, 23, 1, 1],
+             [0, 0, 145, 1],
+             [0, 289, 36, 1],
              ...]
-            The 0-1 columns are the drug node ids, while the 2-3 are the disease node ids.
 
         label : np.array
             Labels of data.
@@ -78,6 +78,44 @@ def load_data(args):
     return g, data, label
 
 
+def load_graph(dataset: str, k: int):
+    """Construct heterogeneous drug-disease graph for given dataset.
+
+        Parameters
+        ----------
+        dataset : string
+            The dataset to be used, including 'B-dataset', 'C-dataset' and 'F-dataset'.
+        k : int
+            The topk similarities to be binaried.
+
+        Returns
+        -------
+        g : dgl.graph
+            Heterogeneous graph representing the drug-disease network.
+    """
+    drug_drug = pd.read_csv('./dataset/{}/drug_drug.csv'.format(dataset), header=None)
+    drug_drug_link = topk_filtering(drug_drug.values, k)
+    disease_disease = pd.read_csv('./dataset/{}/disease_disease.csv'.format(dataset), header=None)
+    disease_disease_link = topk_filtering(disease_disease.values, k)
+    drug_disease = pd.read_csv('./dataset/{}/drug_disease.csv'.format(dataset), header=None)
+    drug_disease_link = np.array(np.where(drug_disease == 1)).T
+    disease_drug_link = np.array(np.where(drug_disease.T == 1)).T
+    graph_data = {('drug', 'drug-drug', 'drug'): (torch.tensor(drug_drug_link[:, 0]),
+                                                  torch.tensor(drug_drug_link[:, 1])),
+                  ('drug', 'drug-disease', 'disease'): (torch.tensor(drug_disease_link[:, 0]),
+                                                        torch.tensor(drug_disease_link[:, 1])),
+                  ('disease', 'disease-drug', 'drug'): (torch.tensor(disease_drug_link[:, 0]),
+                                                        torch.tensor(disease_drug_link[:, 1])),
+                  ('disease', 'disease-disease', 'disease'): (torch.tensor(disease_disease_link[:, 0]),
+                                                              torch.tensor(disease_disease_link[:, 1]))}
+    g = dgl.heterograph(graph_data)
+    drug_feature = np.hstack((drug_drug.values, np.zeros(drug_disease.shape)))
+    dis_feature = np.hstack((np.zeros(drug_disease.T.shape), disease_disease.values))
+    g.nodes['drug'].data['h'] = torch.from_numpy(drug_feature).to(torch.float32)
+    g.nodes['disease'].data['h'] = torch.from_numpy(dis_feature).to(torch.float32)
+    return g
+
+
 def topk_filtering(d_d: np.array, k: int):
     """Convert the Topk similarities to 1 and generate the Topk interactions.
     """
@@ -88,16 +126,15 @@ def topk_filtering(d_d: np.array, k: int):
 
 
 def meta_path_instance(args, drug_id: int, disease_id: int, links: dict, k: int):
-    """Generate the pseudo meta-paths as instances.
+    """Generate the pseudo meta-path instances.
     """
-
     mpi = [[drug_id, drug_id, disease_id, disease_id]]
     mpi.extend([[drug_id, drug, disease_id, disease_id]
                 for drug in links['drug-drug'][links['drug-drug'][:, 0] == drug_id][:, 1]])
     mpi.extend([[drug_id, drug_id, dis, disease_id]
                 for dis in links['disease-disease'][links['disease-disease'][:, 0] == disease_id][:, 1]])
     mpi.extend([[drug_id, drug, dis, disease_id]
-                for drug in links['drug-drug'][links['drug-drug'][:, 0] == drug_id][:, 0]
+                for drug in links['drug-drug'][links['drug-drug'][:, 0] == drug_id][:, 1]
                 for dis in links['disease-disease'][links['disease-disease'][:, 0] == disease_id][:, 1]])
     if len(mpi) < k * (k + 2) + 1:
         for i in range(k * (k + 2) + 1 - len(mpi)):

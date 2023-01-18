@@ -5,7 +5,7 @@ import numpy as np
 from warnings import simplefilter
 from sklearn.model_selection import StratifiedKFold
 from torch.utils.data import TensorDataset
-from load_data import load_data, remove_graph, \
+from load_data import load_data, load_graph, remove_graph, \
     get_data_loaders
 from model import Model
 from utils import get_metrics, get_metrics_auc, set_seed, \
@@ -32,23 +32,11 @@ def train():
     simplefilter(action='ignore', category=UserWarning)
     print('Arguments: {}'.format(args))
     set_seed(args.seed)
-    try:
-        os.mkdir('result')
-    except:
-        try:
-            os.mkdir('result/' + args.dataset)
-        except:
-            try:
-                os.mkdir(args.saved_path)
-            except:
-                pass
-        pass
-    pass
 
-    try:
-        os.mkdir(args.saved_path)
-    except:
-        pass
+    if not os.path.exists(f'result/{args.dataset}'):
+        os.makedirs(f'result/{args.dataset}')
+    if not os.path.exists(args.saved_path):
+        os.makedirs(args.saved_path)
 
     argsDict = args.__dict__
     with open(os.path.join(args.saved_path, 'setting.txt'), 'w') as f:
@@ -89,7 +77,6 @@ def train():
                    'disease': g_train.nodes['disease'].data['h']}
         train_loader = get_data_loaders(TensorDataset(train_data, train_label), args.batch_size,
                                         shuffle=True, drop=True)
-        torch.save(train_label, 'test2.pt')
 
         val_loader = get_data_loaders(TensorDataset(val_data, val_label), args.batch_size, shuffle=False)
 
@@ -115,10 +102,15 @@ def train():
 
         for epoch in range(1, args.epoch + 1):
             total_loss = 0
+            # progress = tqdm(enumerate(train_loader), desc='Loss:', total=len(train_loader))
+            # train_data, train_label = negative_sampling(ratio, train_data,
+            #                                             train_label, seed=epoch)
+            # train_data = torch.tensor(train_data).to(device)
+            # train_label = torch.tensor(train_label).to(device)
+            # train_loader = get_data_loaders(TensorDataset(train_data, train_label), args.batch_size, shuffle=True)
 
             pred_train, label_train = torch.zeros(train_label.shape).to(device), \
                                       torch.zeros(train_label.shape).to(device)
-
             for i, data_ in enumerate(train_loader):
                 model.train()
                 x_train, y_train = data_[0].to(device), data_[1].to(device)
@@ -130,13 +122,15 @@ def train():
                 loss.backward()
                 optimizer.step()
                 total_loss += loss.item() / len(train_loader)
+                # progress.set_description("Loss: {:.4f}".format(total_loss / (i + 1)))
                 pred_train[args.batch_size * i: args.batch_size * i + len(y_train)] = score.detach()
                 label_train[args.batch_size * i: args.batch_size * i + len(y_train)] = y_train.detach()
 
             AUC_train, AUPR_train = get_metrics_auc(label_train.cpu().detach().numpy(),
                                                     pred_train.cpu().detach().numpy())
+            # if epoch % args.print_every == 0:
+            AUC_val, AUPR_val, pred_val = val(args, model, val_loader, val_label, g_train, feature, device)
             if epoch % args.print_every == 0:
-                AUC_val, AUPR_val, pred_val = val(args, model, val_loader, val_label, g_train, feature, device)
                 print('Epoch {} Loss: {:.5f}; Train: AUC {:.3f}, AUPR {:.3f};'
                       ' Val: AUC {:.3f}, AUPR {:.3f}'.format(epoch, total_loss, AUC_train,
                                                              AUPR_train, AUC_val, AUPR_val))
@@ -145,6 +139,8 @@ def train():
             m = checkpoint(args, model, print_list, [total_loss, AUC_train, AUPR_train], fold)
             if m:
                 best_model = m
+            # print('Epoch {} Loss: {:.3f}; Train: AUC {:.3f}, AUPR {:.3f}'.format(epoch, total_loss,
+            #                                                                      AUC_train, AUPR_train))
 
         AUC_val, AUPR_val, pred_val = val(args, best_model, val_loader, val_label, g_train, feature, device)
         pred_result[val_drug_id, val_disease_id] = pred_val.cpu().detach().numpy()
@@ -154,6 +150,7 @@ def train():
                                                                           'training_score_{}.csv'.format(fold)),
                                                              index=False)
         fold += 1
+        # break
 
     AUC, AUPR, Acc, F1, Pre, Rec, Spec = get_metrics(label.cpu().detach().numpy(),
                                                      pred_result.flatten())
