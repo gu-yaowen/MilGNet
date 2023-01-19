@@ -1,5 +1,5 @@
 # MilGNet
-Codes for "MilGNet: A Multi-instance Learning-based Heterogeneous Graph Network for Drug repositioning"
+Codes for "Meta-Path-Based Deep Multiple Instance Learning with Heterogeneous Graph Neural Network for Drug-disease Association Prediction"
 
 # Reference
 If you make advantage of the MilGNet model or its modules proposed in our paper, please cite the following in your manuscript:
