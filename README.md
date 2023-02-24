@@ -29,5 +29,8 @@ TBD
 ## Model Intepretebility
 Use the ``model_intepret.ipynb`` to easily generate topk most important **meta-path instances** for given drug-disease pair (require **pre-trained model** first).
 
+## Baselines
+[DDA-SKF](https://github.com/GCQ2119216031/DDA-SKF), [SCPMF](https://github.com/luckymengmeng/SCPMF), [NIMCGCN](https://github.com/ljatynu/NIMCGCN), [DRWBNCF](https://github.com/luckymengmeng/DRWBNCF), [REDDA](https://github.com/gu-yaowen/REDDA), [PSGCN](https://github.com/bbjy/PSGCN), [HAN](https://github.com/gu-yaowen/MilGNet/blob/master/baseline/HAN_imp.py), and [MHGNN](https://github.com/gu-yaowen/MilGNet/blob/master/baseline/MHGNN).
+
 # Contact
 We welcome you to contact us (email: gu.yaowen@imicams.ac.cn) for any questions and cooperations.
