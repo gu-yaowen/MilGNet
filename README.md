@@ -1,12 +1,12 @@
 # MilGNet
-Codes for "MilGNet: A Multi-instance Learning-based Heterogeneous Graph Network for Drug repositioning"
+Codes for "Meta-Path-Based Deep Multiple Instance Learning with Heterogeneous Graph Neural Network for Drug-disease Association Prediction"
 
 # Reference
 If you make advantage of the MilGNet model or its modules proposed in our paper, please cite the following in your manuscript:
 TBD
 
 # Overview
-![MilGNet](https://github.com/gu-yaowen/MilGNet/blob/main/model_structure.png)
+![MilGNet](https://github.com/gu-yaowen/MilGNet/blob/master/model%20structure.png)
 ## Environment Requirement
 * torch==1.8.0
 * dgl==0.5.2
@@ -27,7 +27,7 @@ TBD
     For more arguments, please see args.py
     
 ## Model Intepretebility
-Use the ''model_intepret.ipynb'' to easily generate topk most important **meta-path instances** for given drug-disease pair (require **pre-trained model** first).
+Use the ``model_intepret.ipynb`` to easily generate topk most important **meta-path instances** for given drug-disease pair (require **pre-trained model** first).
 
 # Contact
 We welcome you to contact us (email: gu.yaowen@imicams.ac.cn) for any questions and cooperations.
