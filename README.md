@@ -25,7 +25,8 @@ TBD
         -lr: Learning rate
         -dp: Dropout rate
     For more arguments, please see args.py
-    
+Note: please see the optimal hyperparameter settings for each benchmark dataset, and other support information in 'supplementary materials.docx'.  
+
 ## Model Intepretebility
 Use the ``model_intepret.ipynb`` to easily generate topk most important **meta-path instances** for given drug-disease pair (require **pre-trained model** first).
 
