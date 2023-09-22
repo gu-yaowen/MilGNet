@@ -1,4 +1,7 @@
 # MilGNet
+![Visits Badge](https://img.shields.io/badge/dynamic/json?label=visits&query=$.message&color=blue&url=https://hits.dwyl.com/gu-yaowen/MilGNet.json)
+![Downloads](https://img.shields.io/github/downloads/gu-yaowen/MilGNet/total.svg)
+
 Codes for "Meta-Path-Based Deep Multiple Instance Learning with Heterogeneous Graph Neural Network for Drug-disease Association Prediction"
 
 # Reference
