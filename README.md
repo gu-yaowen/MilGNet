@@ -7,7 +7,7 @@ Codes for "Meta-Path-Based Deep Multiple Instance Learning with Heterogeneous Gr
 # Reference
 If you make advantage of the MilGNet model or its modules proposed in our paper, please cite the following in your manuscript:
 
-Gu Y, Zheng S, Zhang B, et al. MilGNet: a multi-instance learning-based heterogeneous graph network for drug repositioning[C]//2022 IEEE International Conference on Bioinformatics and Biomedicine (BIBM). IEEE, 2022: 430-437.
+TBD
 
 # Overview
 ![MilGNet](https://github.com/gu-yaowen/MilGNet/blob/master/model%20structure.png)
