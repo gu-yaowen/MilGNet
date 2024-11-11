@@ -1,13 +1,21 @@
 # MilGNet
 ![Visits Badge](https://img.shields.io/badge/dynamic/json?label=visits&query=$.message&color=blue&url=https://hits.dwyl.com/gu-yaowen/MilGNet.json)
-![Downloads](https://img.shields.io/github/downloads/gu-yaowen/MilGNet/total.svg)
 
 Codes for "Meta-Path-Based Deep Multiple Instance Learning with Heterogeneous Graph Neural Network for Drug-disease Association Prediction"
 
 # Reference
 If you make advantage of the MilGNet model or its modules proposed in our paper, please cite the following in your manuscript:
 
-TBD
+```
+@inproceedings{gu2022milgnet,
+title={Milgnet: a multi-instance learning-based heterogeneous graph network for drug repositioning},
+author={Gu, Yaowen and Zheng, Si and Zhang, Bowen and Kang, Hongyu and Li, Jiao},
+booktitle={2022 IEEE International Conference on Bioinformatics and Biomedicine (BIBM)},
+pages={430--437},
+year={2022},
+organization={IEEE}
+}
+```
 
 # Overview
 ![MilGNet](https://github.com/gu-yaowen/MilGNet/blob/master/model%20structure.png)
