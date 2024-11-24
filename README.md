@@ -15,6 +15,18 @@ pages={430--437},
 year={2022},
 organization={IEEE}
 }
+@article{gu2025milgnet,
+   title = {Deep multiple instance learning on heterogeneous graph for drug–disease association prediction},
+   author = {Gu, Yaowen and Zheng, Si and Zhang, Bowen and Kang, Hongyu and Jiang, Rui and Li, Jiao},
+   journal = {Computers in Biology and Medicine},
+   volume = {184},
+   pages = {109403},
+   ISSN = {0010-4825},
+   DOI = {https://doi.org/10.1016/j.compbiomed.2024.109403},
+   url = {https://www.sciencedirect.com/science/article/pii/S0010482524014884},
+   year = {2025}
+}
+
 ```
 
 # Overview
